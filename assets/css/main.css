@@ -4016,7 +4016,7 @@ a:hover {
     font-style: normal;
     font-weight: normal;
     line-height: 1.36;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 .game-profile-price {
@@ -4031,7 +4031,7 @@ a:hover {
 .game-profile-price__value {
     margin: 20px 0;
     color: #F46119;
-    font-size: 27px;
+    font-size: 17px;
     font-style: normal;
     font-weight: 700;
     line-height: 1.33;
