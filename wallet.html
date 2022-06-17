@@ -140,10 +140,11 @@
                             </div>
                             <!-- the bio section is below  -->
                             <div class="widjet --bio">
-                                <!-- <div class="widjet__head">
+                                <div class="widjet__head">
                                     <h3 class="uk-text-lead">Bio</h3>
-                                </div> -->
-                                <div class="widjet__body"><span>With great power
+                                </div>
+
+                                <div class="widjet__body"><span>Uncle Ben used to say, With great power
                                         comes great responsibility.</span>
                                 </div>
                             </div>
@@ -442,7 +443,8 @@
                                         <a class="uk-button uk-button-primary"
                                             href="login.html">
                                             <i class="ico_arrow-circle-right"></i>
-                                            <span class="uk-margin-small-left">Log out</span>
+                                            <span class="uk-margin-small-left">Log
+                                                out</span>
                                         </a>
                                         <!-- </div> -->
                                     </div>
@@ -455,6 +457,7 @@
                 </main>
             </div>
         </div>
+
         <div class="page-modals">
             <div class="uk-flex-top" id="modal-report" data-uk-modal>
                 <div class="uk-modal-dialog uk-modal-body
@@ -463,14 +466,17 @@
                         data-uk-close></button>
                     <h2 class="uk-modal-title">Edit Profile</h2>
                     <form class="uk-form-stacked" action="#">
+                        
                         <div class="uk-margin">
-                            <div class="uk-form-label">Name</div>
-                            <div class="uk-form-controls">
-                                <textarea
-                                    class="uk-textarea" name="details"
-                                    placeholder="Try to include all details..."></textarea>
+                            <div class="uk-form-label">Profile Photo</div>
+                            <div class="uk-form-controls uk-margin-small-top">
+                                <div data-uk-form-custom><input type="file"><button
+                                        class="uk-button uk-button-default"
+                                        type="button" tabindex="-1"><i
+                                            class="ico_attach-circle"></i><span>Upload</span></button></div>
                             </div>
                         </div>
+
                         <div class="uk-margin">
                             <div class="uk-form-label">Bio</div>
                             <div class="uk-form-controls">
@@ -478,14 +484,8 @@
                                     class="uk-textarea" name="details"
                                     placeholder="Try to include all details..."></textarea>
                             </div>
-                            <div class="uk-form-controls uk-margin-small-top">
-                                <div data-uk-form-custom><input type="file"><button
-                                        class="uk-button uk-button-default"
-                                        type="button" tabindex="-1"><i
-                                            class="ico_attach-circle"></i><span>Upload
-                                            a Photo</span></button></div>
-                            </div>
                         </div>
+
                         <div class="uk-margin">
                             <div class="uk-grid uk-flex-right" data-uk-grid>
                                 <div><button class="uk-button uk-button-small
@@ -494,6 +494,7 @@
                                         uk-button-danger">Submit</button></div>
                             </div>
                         </div>
+                        
                     </form>
                 </div>
             </div>
