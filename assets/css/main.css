@@ -1092,6 +1092,7 @@ a:hover {
 .uk-button-primary {
     background: #F5F5F5;
     color: #5F5F5F;
+    border-color: rgb(180, 170, 170);
 }
 
 .uk-button-primary:hover,
@@ -1105,6 +1106,7 @@ a:hover {
 .uk-button-danger {
     background: rgba(244, 97, 25, 0.05);
     color: #F46119;
+    border-color: rgb(186, 186, 186);
 }
 
 .uk-button-danger:hover,
@@ -1112,6 +1114,7 @@ a:hover {
 .uk-button-danger:active,
 .uk-button-danger.nice-select.open {
     background: #F46119;
+    color: #fff;
 }
 
 .uk-button-link {
@@ -4255,7 +4258,8 @@ body.dark-theme .uk-button-secondary {
 
 body.dark-theme .uk-button-primary {
     background: #1A2634;
-    color: #fff;
+    color: rgb(214, 214, 214);
+    border-color: rgb(221, 221, 221);
 }
 
 body.dark-theme .uk-text-lead {
