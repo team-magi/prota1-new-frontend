@@ -18,7 +18,7 @@ Vue.component('vheader', {
                     <div class="search__input"><i
                             class="ico_search"></i><input
                             type="search" name="search"
-                            placeholder="dddddd"></div>
+                            placeholder="Search"></div>
                 </div>
             </div>
             <div class="page-header__action">
