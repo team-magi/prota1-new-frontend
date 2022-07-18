@@ -25,11 +25,44 @@ Vue.component('vheader', {
                 <a class="action-btn" href="notification.html"><i
                         class="ico_notification"></i><span
                         class="animation-ripple-delay2"></span></a>
-                <a class="profile" href="wallet.html"><img
-                        src="assets/photos/logo.png"
-                        alt="profile"></a>
+                <span class="profile" @click='showLoginmodal'><img
+                src="assets/photos/logo.png"
+                alt="profile">登录</span>
+                <!--<a class="profile" href="wallet.html"></a>-->
             </div>
         </div>
+
+
+        // // @close="SET_LOGINPUP(false)"
+        <div class='el-dialog__wrapper' >
+            <div style="position:fixed; left:20%;top:15%;width:500px;height:800px;background:#fff; color:#333;">
+                <div class="dialogTiti">Authetication selection</div>
+                <div class="dialogCard" @click="metamaskConnect">
+                    <img src="assets/img/Metamask.png" alt="" />
+                    <span>Metamask</span>
+                    <span class="dc_right"
+                        ><img src="assets/img/arrowWhite.png" alt=""
+                    /></span>
+                </div>
+                <div class="dialogCard success">
+                    <img src="assets/img/twitter-fill.png" alt="" />
+                    <span>Twitter</span>
+                    <span class="dc_right"
+                        ><img src="assets/img/arrowWhite.png" alt=""
+                    /></span>
+                    <div class="successico">
+                        <img src="assets/img/checkfill.png" alt="" />
+                    </div>
+                </div>
+                <div class="dialogfoter">
+                        Congratulations！Authentication successded, unlock all
+                        permission
+                </div>
+            </div>
+        </div>
+
+
+
     </div>
 </header>`,
     data() {
@@ -40,7 +73,13 @@ Vue.component('vheader', {
     methods: {
         showdata() {
             console.log(111111)
-        }
+        },
+        showLoginmodal(){
+            console.log(333)
+        },
+        metamaskConnect(){
+            console.log(3342432)
+        },
     },
 });
 

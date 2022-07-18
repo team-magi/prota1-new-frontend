@@ -3,7 +3,8 @@
 
 // Vue.use(ViewUI)
 axios.defaults.timeout = 50000;
-axios.defaults.baseURL = ''//process.env.VUE_APP_API_ROOT;
+
+axios.defaults.baseURL = 'http://www.baid.com'//process.env.VUE_APP_API_ROOT;
 axios.defaults.headers.get["content-type"] = "application/json";
 function $Ms(e, msg) {
     console.log(msg);
@@ -72,7 +73,7 @@ axios.interceptors.response.use(
  * @returns {Promise}
  */
 
-export function get(url, params = {}) {
+function get(url, params = {}) {
     return new Promise((resolve, reject) => {
         let idToken = localStorage.getItem("token") || "";
         axios.defaults.headers.get["Authorization"] = `Bearer ${idToken}`;
@@ -98,7 +99,7 @@ export function get(url, params = {}) {
  * @returns {Promise}
  */
 
-export function post(url, data = {}, token) {
+function post(url, data = {}, token) {
     // alert(data)
     return new Promise((resolve, reject) => {
         let idToken = token ? token : "";
@@ -121,7 +122,7 @@ export function post(url, data = {}, token) {
  * @returns {Promise}
  */
 
-export function patch(url, data = {}) {
+function patch(url, data = {}) {
     return new Promise((resolve, reject) => {
         let token = sessionStorage.getItem("Token");
         let idToken = token ? token : "";
@@ -144,7 +145,7 @@ export function patch(url, data = {}) {
  * @returns {Promise}
  */
 
-export function put(url, data = {}) {
+function put(url, data = {}) {
     return new Promise((resolve, reject) => {
         axios.put(url, data).then(
             (response) => {
@@ -157,7 +158,7 @@ export function put(url, data = {}) {
     });
 }
 
-export function del(url, data = {}) {
+function del(url, data = {}) {
     return new Promise((resolve, reject) => {
         let token = sessionStorage.getItem("Token");
         let idToken = token ? token : "";
@@ -175,14 +176,5 @@ export function del(url, data = {}) {
             .catch((err) => {
                 resolve(err);
             });
-
-        // axios.delete(url, data)
-        //     .then(response => {
-
-        //         resolve(response);
-
-        //     }, err => {
-        //         resolve(err);
-        //     })
     });
 }

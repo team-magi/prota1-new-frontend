@@ -1,6 +1,5 @@
-import Vue from "vue";
-import { get, post } from "./service";
-
+// import Vue from "vue";
+// import { get, post } from "./service";
 
 
 jQuery.getScript("./servive.js", function() {
