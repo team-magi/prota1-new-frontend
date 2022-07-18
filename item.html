@@ -14,105 +14,96 @@
             type="image/x-icon">
         <link rel="stylesheet" href="assets/css/libs.min.css">
         <link rel="stylesheet" href="assets/css/main.css">
+
         <script src="assets/js/vue.min.js"></script> 
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-            rel="stylesheet">
-        <link
-            href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap"
-            rel="stylesheet">
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://unpkg.com/http-vue-loader"></script> 
 
         <!-- Social Buttons CSS -->
         <link rel="stylesheet" href="assets/css/social-share.css">
-
     </head>
 
-    <body class="dark-theme page-market">
-
+    <body class="dark-theme page-profile">
         <input id="toggle" type="checkbox">
         <script type="text/javascript">
-            document.getElementById("toggle").addEventListener("click", function () {
-                document.getElementsByTagName('body')[0].classList.toggle("dark-theme");
-            });
+        document.getElementById("toggle").addEventListener("click", function() {
+            document.getElementsByTagName('body')[0].classList.toggle("dark-theme");
+        });
 
-        </script>
+        // axios({
+        //     method:"POST",
+        //     url:"http://localhost:3000/posts",
+        //     data:{
+        //         title:"axios学习",
+        //         author:"Yehaocong"
+        //     }
+        // }).then(response=>{
+        //     console.log(response);
+        // })
 
-        <!-- Loader-->
-        <div id="page-preloader">
-            <div class="preloader-1">
-                <div class="loader-text">Loading</div>
-                <span class="line line-1"></span>
-                <span class="line line-2"></span>
-                <span class="line line-3"></span>
-                <span class="line line-4"></span>
-                <span class="line line-5"></span>
-                <span class="line line-6"></span>
-                <span class="line line-7"></span>
-                <span class="line line-8"></span>
-                <span class="line line-9"></span>
+
+    </script>
+        <div id='app'>
+        
+            <todo-item ></todo-item>
+            <!-- <my-component></my-component> -->
+            
+            <!-- Loader-->
+            <div id="page-preloader">
+                <div class="preloader-1">
+                    <div class="loader-text">Loading</div>
+                    <span class="line line-1"></span>
+                    <span class="line line-2"></span>
+                    <span class="line line-3"></span>
+                    <span class="line line-4"></span>
+                    <span class="line line-5"></span>
+                    <span class="line line-6"></span>
+                    <span class="line line-7"></span>
+                    <span class="line line-8"></span>
+                    <span class="line line-9"></span>
+                </div>
             </div>
+            <!-- Loader end-->
+        
 
-        </div>
-        <!-- Loader end-->
-
-        <div class="page-wrapper">
-            <header class="page-header">
-                <div class="page-header__inner">
-                    <div class="page-header__sidebar">
-                        <div class="page-header__menu-btn"><button
-                                class="menu-btn ico_menu is-active"></button></div>
-                        <div class="page-header__logo">
-                            <a href="login.html">
-                                <img src="assets/photos/logo.png" alt="logo"><span
-                                    class="page-header__logo_text">Prota-1</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="page-header__content">
-                        <div class="page-header__search">
-                            <div class="search">
-                                <div class="search__input"><i
-                                        class="ico_search"></i><input
-                                        type="search" name="search"
-                                        placeholder="Search"></div>
+        
+            <div class="page-wrapper">
+                <vheader></vheader>
+                <header class="page-header">
+                    <div class="page-header__inner">
+                        <div class="page-header__sidebar">
+                            <div class="page-header__menu-btn"><button
+                                    class="menu-btn ico_menu is-active"></button></div>
+                            <div class="page-header__logo">
+                                <a href="login.html">
+                                    <img src="assets/photos/logo.png" alt="logo"><span
+                                        class="page-header__logo_text">Prota-1</span>
+                                </a>
                             </div>
                         </div>
-                        <div class="page-header__action">
-                            <a class="action-btn" href="notification.html"><i
-                                    class="ico_notification"></i><span
-                                    class="animation-ripple-delay2"></span></a>
-                            <a class="profile" href="wallet.html"><img
-                                    src="assets/photos/logo.png"
-                                    alt="profile"></a>
+                        <div class="page-header__content">
+                            <div class="page-header__search">
+                                <div class="search">
+                                    <div class="search__input"><i
+                                            class="ico_search"></i><input
+                                            type="search" name="search"
+                                            placeholder="Search"></div>
+                                </div>
+                            </div>
+                            <div class="page-header__action">
+                                <a class="action-btn" href="notification.html"><i
+                                        class="ico_notification"></i><span
+                                        class="animation-ripple-delay2"></span></a>
+                                <a class="profile" href="wallet.html"><img
+                                        src="assets/photos/logo.png"
+                                        alt="profile"></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </header>
+                </header>
 
-            <div class="page-content">
-                <aside class="sidebar is-show" id="sidebar">
-                    <div class="sidebar-box">
-                        <ul class="uk-nav">
-                            <li class="uk-nav-header">Start here</li>
-                            <li><a href="home.html"><i class="ico_home"></i><span>Home</span></a></li>
-                            <li><a href="stories.html"><i
-                                        class="ico_streams"></i><span>Stories</span></a></li>
-                            <li class="uk-active"><a href="collections.html"><i
-                                        class="ico_favourites"></i><span>Collections</span></a></li>
-                            <li><a href="upcoming.html"><i class="ico_store"></i><span>Upcoming</span></a></li>
-                            <li><a href="friends.html"><i class="ico_friends"></i><span>Friends</span></a></li>
-                            <li><a href="chat.html"><i
-                                        class="ico_chats"></i><span>Chats</span><span
-                                        class="count">soon</span></a></li>
-                            <!-- end of "Web3 social" and start of "Support" -->
-                            <li class="uk-nav-header">Support</li>
-                            <li><a href="#modal-report" data-uk-toggle><i
-                                        class="ico_report"></i><span>Privacy</span></a></li>
-                            <li><a href="#modal-help" data-uk-toggle><i
-                                        class="ico_help"></i><span>Help</span></a></li>
-                        </ul>
-                    </div>
-                </aside>
+                <div class="page-content">
+                    <vleft></vleft>
 
                 <main class="page-main">
                     <ul class="uk-breadcrumb">
@@ -345,6 +336,38 @@
 
         <script src="assets/js/libs.js"></script>
         <script src="assets/js/main.js"></script>
+
+        <script src='./components/header.js'></script>
+        <script src='./components/vleft.js'></script>
     </body>
 
+    <script>
+        Vue.use(httpVueLoader);
+        Vue.component('vheader');
+        Vue.component('vleft');
+        var app = new Vue({
+            el: '#app',
+            // components: {
+            // 'my-component': httpVueLoader('my-component.vue')
+            // },
+
+            data: {
+                msg: '11111',
+                groceryList: [
+                    { id: 0, text: '蔬菜1111' },
+                    { id: 1, text: '奶酪2222' },
+                    { id: 2, text: '牛肉33333' }
+                ]
+            },
+            methods: {
+                // show(){
+                //     console.log(111111)
+                // }
+            },
+        })
+    </script>
+
+    <style>
+        .abc{background: #999;}
+    </style>
 </html>

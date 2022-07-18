@@ -25,7 +25,7 @@ Vue.component('vleft', {
 </aside>`,
     data() {
         return {
-            mddd: '组件组件'
+            mddd: 'test test'
         }
     },
     methods: {
