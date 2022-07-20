@@ -1,6 +1,6 @@
 // import Web3, { utils } from "web3";
 const newWeb3 = new Web3(window.ethereum);
-console.log(newWeb3,111,Web3.utils)
+// console.log(newWeb3,111,Web3.utils)
 function parseChainId(chainId) {
     return Number.parseInt(chainId, 16);
 }

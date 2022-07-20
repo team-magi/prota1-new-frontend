@@ -1,13 +1,13 @@
 {
   /* <script src="https://unpkg.com/axios/dist/axios.min.js"></script>; */
 }
-jQuery.getScript("https://unpkg.com/axios/dist/axios.min.js", function() {
-  console.log(a, 111);
-});
+// jQuery.getScript("https://unpkg.com/axios/dist/axios.min.js", function() {
+//   console.log(a, 111222);
+// });
 jQuery(document).ready(function($) {
-  jQuery.getScript("./assets/js/test.js", function() {
-    console.log(a, 111);
-  });
+  // jQuery.getScript("./assets/js/api/index.js", function() {
+  //   console.log(ddd, 111);
+  // });
   $(".js-select").niceSelect();
   $(document).on("click", ".menu-btn", function() {
     $(this).toggleClass("is-active");

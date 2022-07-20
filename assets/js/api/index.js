@@ -1,13 +1,20 @@
 // import Vue from "vue";
 // import { get, post } from "./service";
-
-
-jQuery.getScript("./servive.js", function() {
-  console.log(a, 111);
-
-  const Axios = {
+let baseUrl = "https://dev.protagonist-one.com"
+let $http = '1111'
+// jQuery.getScript("./assets/js/api/service.js", function() {
+    // console.log(get,222111)
+    $http = {
         //获取用户信息
-        user(json) {
+        getuser(json) {
+            // return axios({
+            //     method:"POST",
+            //     url:baseUrl+"/api/user/api/user",
+            //     data:{
+            //         title:"axios学习",
+            //         author:"Yehaocong"
+            //     }
+            // })
             return get("/api/user", json);
         },
         //获取最新文章
@@ -75,7 +82,10 @@ jQuery.getScript("./servive.js", function() {
 
 
     };
-});
+
+
+    // console.log(111,Axios)
+// });
 
 // export default {
 //     install() {

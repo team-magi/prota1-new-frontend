@@ -34,32 +34,7 @@ Vue.component('vheader', {
 
 
         // // @close="SET_LOGINPUP(false)"
-        <div class='el-dialog__wrapper' >
-            <div style="position:fixed; left:20%;top:15%;width:500px;height:800px;background:#fff; color:#333;">
-                <div class="dialogTiti">Authetication selection</div>
-                <div class="dialogCard" @click="metamaskConnect">
-                    <img src="assets/img/Metamask.png" alt="" />
-                    <span>Metamask</span>
-                    <span class="dc_right"
-                        ><img src="assets/img/arrowWhite.png" alt=""
-                    /></span>
-                </div>
-                <div class="dialogCard success">
-                    <img src="assets/img/twitter-fill.png" alt="" />
-                    <span>Twitter</span>
-                    <span class="dc_right"
-                        ><img src="assets/img/arrowWhite.png" alt=""
-                    /></span>
-                    <div class="successico">
-                        <img src="assets/img/checkfill.png" alt="" />
-                    </div>
-                </div>
-                <div class="dialogfoter">
-                        Congratulations！Authentication successded, unlock all
-                        permission
-                </div>
-            </div>
-        </div>
+       
 
 
 
@@ -81,7 +56,39 @@ Vue.component('vheader', {
             console.log(3342432)
         },
     },
+    // mounted() {
+    //     console.log(window.location.pathname,1111)
+    // },
 });
 
+
+
+
+//  <div class='el-dialog__wrapper' >
+        //     <div style="position:fixed; left:20%;top:15%;width:500px;height:800px;background:#fff; color:#333;">
+        //         <div class="dialogTiti">Authetication selection</div>
+        //         <div class="dialogCard" @click="metamaskConnect">
+        //             <img src="assets/img/Metamask.png" alt="" />
+        //             <span>Metamask</span>
+        //             <span class="dc_right"
+        //                 ><img src="assets/img/arrowWhite.png" alt=""
+        //             /></span>
+        //         </div>
+        //         <div class="dialogCard success">
+        //             <img src="assets/img/twitter-fill.png" alt="" />
+        //             <span>Twitter</span>
+        //             <span class="dc_right"
+        //                 ><img src="assets/img/arrowWhite.png" alt=""
+        //             /></span>
+        //             <div class="successico">
+        //                 <img src="assets/img/checkfill.png" alt="" />
+        //             </div>
+        //         </div>
+        //         <div class="dialogfoter">
+        //                 Congratulations！Authentication successded, unlock all
+        //                 permission
+        //         </div>
+        //     </div>
+        // </div>
 
 

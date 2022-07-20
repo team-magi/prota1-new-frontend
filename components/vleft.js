@@ -3,8 +3,8 @@ Vue.component('vleft', {
     template: `<aside class="sidebar is-show" id="sidebar">
     <div class="sidebar-box">
         <ul class="uk-nav">
-            <li class="uk-nav-header">Start here</li>
-            <li class="uk-active"><a href="home.html"><i class="ico_home"></i><span>Home</span></a></li>
+            <li class="uk-nav-header">Start here {{this.isCurrentPath}}</li>
+            <li vClass="{this.isCurrentPath ? 'uk-active' : '' }"><a href="home.html"><i class="ico_home"></i><span>Home</span></a></li>
             <li><a href="stories.html"><i
                         class="ico_streams"></i><span>Stories</span></a></li>
             <li><a href="collections.html"><i
@@ -25,13 +25,20 @@ Vue.component('vleft', {
 </aside>`,
     data() {
         return {
-            mddd: 'test test'
+            mddd: 'test test',
+            currentPath: 'home.html',
+            isCurrentPath: true,
         }
     },
     methods: {
         showdata() {
             console.log(111111)
         }
+    },
+    mounted() {
+        this.currentPath = window.location.pathname
+
+        console.log(window.location.pathname.indexOf('home.html'),'1111导航',this.currentPath)
     },
 });
 

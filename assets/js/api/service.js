@@ -4,7 +4,7 @@
 // Vue.use(ViewUI)
 axios.defaults.timeout = 50000;
 
-axios.defaults.baseURL = 'http://www.baid.com'//process.env.VUE_APP_API_ROOT;
+axios.defaults.baseURL = 'https://dev.protagonist-one.com/'//process.env.VUE_APP_API_ROOT;
 axios.defaults.headers.get["content-type"] = "application/json";
 function $Ms(e, msg) {
     console.log(msg);
