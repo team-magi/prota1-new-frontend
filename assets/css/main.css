@@ -4511,6 +4511,7 @@ body.dark-theme .activities-item {
 
 body.dark-theme .activities-item__title {
     color: #fff;
+    white-space: break-spaces;
 }
 
 body.dark-theme .activities-item__date {

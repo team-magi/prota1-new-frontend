@@ -33,12 +33,30 @@ Vue.component('vheader', {
         </div>
 
 
-        // // @close="SET_LOGINPUP(false)"
+        <!--// // @close="SET_LOGINPUP(false)"-->
        
 
 
 
     </div>
+    <script type="text/javascript">
+        var isHas = Boolean(document.getElementsByTagName('body')[0].className.indexOf('dark-theme'))
+        if(localStorage.getItem('themestatus') == 1){
+            document.getElementsByTagName('body')[0].className += 'dark-theme'
+        }else{
+            document.getElementsByTagName('body')[0].className = 'page-profile'
+        }
+
+        document.getElementById("toggle").addEventListener("click", function() {
+            var isHas2 = Boolean(document.getElementsByTagName('body')[0].className.indexOf('dark-theme'))
+            if(isHas2){
+                localStorage.setItem('themestatus','1')
+            }else{
+                localStorage.setItem('themestatus','2')
+            }
+            document.getElementsByTagName('body')[0].classList.toggle("dark-theme");
+        });
+    </script>
 </header>`,
     data() {
         return {

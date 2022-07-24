@@ -23,11 +23,19 @@
     </head>
 
     <body class="dark-theme page-profile">
+        <style>
+            body.dark-theme .ico_more::before{
+                content: ''
+            }
+            .ico_more:before{
+                content: '' !important;
+            }
+        </style>
         <input id="toggle" type="checkbox">
         <script type="text/javascript">
-        document.getElementById("toggle").addEventListener("click", function() {
-            document.getElementsByTagName('body')[0].classList.toggle("dark-theme");
-        });
+        // document.getElementById("toggle").addEventListener("click", function() {
+        //     document.getElementsByTagName('body')[0].classList.toggle("dark-theme");
+        // });
 
         // axios({
         //     method:"POST",
@@ -130,7 +138,7 @@
                             </div>
                             <div class="uk-grid uk-grid-small
                                 uk-child-width-1-2@m" data-uk-grid>
-                                <div>
+                                <div v-for="item in 12" :key="item">
                                     <div class="user-item --active">
                                         <div class="user-item__avatar"><img
                                                 src="assets/img/user-list-1.png"
@@ -145,212 +153,11 @@
                                         <div class="user-item__more">
                                             <a class="ico_more"
                                                 href="#modal-report"
-                                                data-uk-toggle>
+                                                data-uk-toggle>更多
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                                <div>
-                                    <div class="user-item --active">
-                                        <div class="user-item__avatar"><img
-                                                src="assets/img/user-list-1.png"
-                                                alt="user"></div>
-                                        <div class="user-item__box">
-                                            <div class="user-item__name">Hermione
-                                                Granger</div>
-                                            <div class="user-item__playing"><b>Hogwarts
-                                                    School</b> of witchcraft and
-                                                wizardary</div>
-                                        </div>
-                                        <div class="user-item__more"><a
-                                                class="ico_more"
-                                                href="#modal-report"
-                                                data-uk-toggle></a></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="user-item --active">
-                                        <div class="user-item__avatar"><img
-                                                src="assets/img/user-list-1.png"
-                                                alt="user"></div>
-                                        <div class="user-item__box">
-                                            <div class="user-item__name">Ron
-                                                Weasley</div>
-                                            <div class="user-item__playing"><b>Hogwarts
-                                                    School</b> of witchcraft and
-                                                wizardary</div>
-                                        </div>
-                                        <div class="user-item__more"><a
-                                                class="ico_more"
-                                                href="#modal-report"
-                                                data-uk-toggle></a></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="user-item --active">
-                                        <div class="user-item__avatar"><img
-                                                src="assets/img/user-list-1.png"
-                                                alt="user"></div>
-                                        <div class="user-item__box">
-                                            <div class="user-item__name">Abus
-                                                Deumbledore</div>
-                                            <div class="user-item__playing"><b>Hogwarts
-                                                    School</b> of witchcraft and
-                                                wizardary</div>
-                                        </div>
-                                        <div class="user-item__more"><a
-                                                class="ico_more"
-                                                href="#modal-report"
-                                                data-uk-toggle></a></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="user-item --active">
-                                        <div class="user-item__avatar"><img
-                                                src="assets/img/user-list-1.png"
-                                                alt="user"></div>
-                                        <div class="user-item__box">
-                                            <div class="user-item__name">Sirius
-                                                Black</div>
-                                            <div class="user-item__playing"><b>Hogwarts
-                                                    School</b> of witchcraft and
-                                                wizardary</div>
-                                        </div>
-                                        <div class="user-item__more"><a
-                                                class="ico_more"
-                                                href="#modal-report"
-                                                data-uk-toggle></a></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="user-item --active">
-                                        <div class="user-item__avatar"><img
-                                                src="assets/img/user-list-1.png"
-                                                alt="user"></div>
-                                        <div class="user-item__box">
-                                            <div class="user-item__name">Neil
-                                                Longbottom</div>
-                                            <div class="user-item__playing"><b>Hogwarts
-                                                    School</b> of witchcraft and
-                                                wizardary</div>
-                                        </div>
-                                        <div class="user-item__more"><a
-                                                class="ico_more"
-                                                href="#modal-report"
-                                                data-uk-toggle></a></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="user-item --active">
-                                        <div class="user-item__avatar"><img
-                                                src="assets/img/user-list-1.png"
-                                                alt="user"></div>
-                                        <div class="user-item__box">
-                                            <div class="user-item__name">Neil
-                                                Longbottom</div>
-                                            <div class="user-item__playing"><b>Hogwarts
-                                                    School</b> of witchcraft and
-                                                wizardary</div>
-                                        </div>
-                                        <div class="user-item__more"><a
-                                                class="ico_more"
-                                                href="#modal-report"
-                                                data-uk-toggle></a></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="user-item --active">
-                                        <div class="user-item__avatar"><img
-                                                src="assets/img/user-list-1.png"
-                                                alt="user"></div>
-                                        <div class="user-item__box">
-                                            <div class="user-item__name">Harry
-                                                Potter</div>
-                                            <div class="user-item__playing"><b>Hogwarts
-                                                    School</b> of witchcraft and
-                                                wizardary</div>
-                                        </div>
-                                        <div class="user-item__more">
-                                            <a class="ico_more"
-                                                href="#modal-report"
-                                                data-uk-toggle>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="user-item --active">
-                                        <div class="user-item__avatar"><img
-                                                src="assets/img/user-list-1.png"
-                                                alt="user"></div>
-                                        <div class="user-item__box">
-                                            <div class="user-item__name">Hermione
-                                                Granger</div>
-                                            <div class="user-item__playing"><b>Hogwarts
-                                                    School</b> of witchcraft and
-                                                wizardary</div>
-                                        </div>
-                                        <div class="user-item__more"><a
-                                                class="ico_more"
-                                                href="#modal-report"
-                                                data-uk-toggle></a></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="user-item --active">
-                                        <div class="user-item__avatar"><img
-                                                src="assets/img/user-list-1.png"
-                                                alt="user"></div>
-                                        <div class="user-item__box">
-                                            <div class="user-item__name">Ron
-                                                Weasley</div>
-                                            <div class="user-item__playing"><b>Hogwarts
-                                                    School</b> of witchcraft and
-                                                wizardary</div>
-                                        </div>
-                                        <div class="user-item__more"><a
-                                                class="ico_more"
-                                                href="#modal-report"
-                                                data-uk-toggle></a></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="user-item --active">
-                                        <div class="user-item__avatar"><img
-                                                src="assets/img/user-list-1.png"
-                                                alt="user"></div>
-                                        <div class="user-item__box">
-                                            <div class="user-item__name">Abus
-                                                Deumbledore</div>
-                                            <div class="user-item__playing"><b>Hogwarts
-                                                    School</b> of witchcraft and
-                                                wizardary</div>
-                                        </div>
-                                        <div class="user-item__more"><a
-                                                class="ico_more"
-                                                href="#modal-report"
-                                                data-uk-toggle></a></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="user-item --active">
-                                        <div class="user-item__avatar"><img
-                                                src="assets/img/user-list-1.png"
-                                                alt="user"></div>
-                                        <div class="user-item__box">
-                                            <div class="user-item__name">Sirius
-                                                Black</div>
-                                            <div class="user-item__playing"><b>Hogwarts
-                                                    School</b> of witchcraft and
-                                                wizardary</div>
-                                        </div>
-                                        <div class="user-item__more"><a
-                                                class="ico_more"
-                                                href="#modal-report"
-                                                data-uk-toggle></a></div>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
 
@@ -467,3 +274,4 @@
         .abc{background: #999;}
     </style>
 </html>
+

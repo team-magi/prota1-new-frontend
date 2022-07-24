@@ -23,24 +23,6 @@
 
     <body class="dark-theme page-profile">
         <input id="toggle" type="checkbox">
-        <script type="text/javascript">
-        document.getElementById("toggle").addEventListener("click", function() {
-            document.getElementsByTagName('body')[0].classList.toggle("dark-theme");
-        });
-
-        // axios({
-        //     method:"POST",
-        //     url:"http://localhost:3000/posts",
-        //     data:{
-        //         title:"axios学习",
-        //         author:"Yehaocong"
-        //     }
-        // }).then(response=>{
-        //     console.log(response);
-        // })
-
-
-    </script>
         <div id='app'>
         
             <todo-item ></todo-item>
@@ -113,24 +95,24 @@
 
                                 <div class="uk-grid uk-child-width-1-4@xl uk-child-width-1-3@l uk-child-width-1-3@s uk-child-width-1-2 uk-flex-middle uk-grid-small"
                                     data-uk-grid>
-                                    <div>
-                                        <div class="game-card">
+                                    <div v-for='item in groceryList' :key="item.id">
+                                        <div class="game-card" >
                                             <div class="game-card__box">
                                                 <div class="game-card__media">
-                                                    <a href="project.html"><img src="assets/photos/nft/kufu7.jpg"
+                                                    <a href="project.html"><img :src="item.logo"
                                                             alt="Struggle of
                                                         Rivalry" /></a>
                                                 </div>
                                                 <div class="game-card__info">
                                                     <a class="game-card__title" href="project.html">
-                                                        Fuku Collection</a>
+                                                        {{item.name}}</a>
                                                     <div class="game-card__rating-and-price">
                                                         <div class="game-card__rating">
                                                             <img src="assets/photos/svg/love.svg" alt="chip" />
-                                                            <span>482</span>
+                                                            <span>{{item.likeCount}}</span>
                                                         </div>
                                                         <div class="game-card__price">
-                                                            <span>191 </span>
+                                                            <span>{{item.commentCount}} </span>
                                                             <img src="assets/photos/svg/share.svg" alt="chip" />
                                                         </div>
                                                     </div>
@@ -139,7 +121,7 @@
                                         </div>
                                     </div>
 
-                                    <div>
+                                    <!-- <div>
                                         <div class="game-card">
                                             <div class="game-card__box">
                                                 <div class="game-card__media">
@@ -293,7 +275,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -449,7 +431,8 @@
 
     <script src="assets/js/libs.js"></script>
     <script src="assets/js/main.js"></script>
-
+    <script src="assets/js/api/service.js"></script>
+    <script src="assets/js/api/index.js"></script>
     <script src='./components/header.js'></script>
     <script src='./components/vleft.js'></script>
 </body>
@@ -460,22 +443,30 @@
     Vue.component('vleft');
     var app = new Vue({
         el: '#app',
-        // components: {
-        // 'my-component': httpVueLoader('my-component.vue')
-        // },
-
         data: {
             msg: '11111',
             groceryList: [
                 { id: 0, text: '蔬菜1111' },
                 { id: 1, text: '奶酪2222' },
                 { id: 2, text: '牛肉33333' }
-            ]
+            ],
+            params: {
+                page: 1,
+                pagesize: 20,
+                isHot: 0,
+                isNew: 1
+            }
+        },
+        mounted(){
+            this.getList()
         },
         methods: {
-            // show(){
-            //     console.log(111111)
-            // }
+            getList(){
+                $http.projectList(this.params).then(res => {
+                    this.groceryList = res.data
+                    console.log(res,12222)
+                })
+            }
         },
     })
 </script>
